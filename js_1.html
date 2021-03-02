@@ -40,7 +40,31 @@
             "salary":50000
             }
             ]
-            }); // 呼叫 avg 函式
+            });
+            /*找出至少包含兩筆整數的陣列 (JavaScript) 中，兩兩數字相乘後的最大值。*/
+            function maxProduct(nums){
+                var total=[];
+                for(var i=0;i<nums.length;i++){
+                    for(var j=i+1;j<nums.length;j++){
+                        total.push(nums[i]*nums[j]);
+                    }
+                }
+                console.log(Math.max(...total));
+            }
+            maxProduct([5, 20, 2, 6]);
+            maxProduct([10, -20, 0, 3]);
+
+            function twoSum(nums, target){
+                for(var i=0;i<nums.length;i++){
+                    for(var j=i+1;j<nums.length;j++){
+                        if(target==nums[i]+nums[j]){
+                            return([i,j]);
+                        }
+                    } 
+                }
+            }
+            var result=twoSum([2, 11, 7, 15], 9);
+            console.log(result);
         </script>
     </head>
     <body>

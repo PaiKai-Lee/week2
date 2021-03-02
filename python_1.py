@@ -2,7 +2,7 @@
 def calculate(min,max):
     sum=0
     for i in range(min,max+1) :
-       sum+=i
+        sum+=i
     print(sum)
 print("要求一:")
 calculate(1, 3)
@@ -51,12 +51,7 @@ def twoSum(nums, target):
     for i in range(0,len(nums)):
         for j in range(i+1,len(nums)):
             if target==nums[i]+nums[j]:
-                return[nums[i],nums[j]]
+                return[i,j]
 print("\n要求四:")
-result=twoSum([2, 11, 7, 15], 13)
+result=twoSum([2, 11, 7, 15], 9)
 print(result) # show [0, 2] because nums[0]+nums[2] is 9
-
-
-            
-
-    
