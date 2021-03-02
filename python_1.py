@@ -48,15 +48,14 @@ maxProduct([5, 20, 2, 6])
 maxProduct([10, -20, 0, 3])
 
 def twoSum(nums, target):
-    num=[]
     for i in range(0,len(nums)):
         for j in range(i+1,len(nums)):
-            num.append(nums[i]+nums[j])
             if target==nums[i]+nums[j]:
-                
-            else:
-                print(nums[i]+nums[j])
-twoSum([2, 11, 7, 15], 9)
+                return[nums[i],nums[j]]
+print("\n要求四:")
+result=twoSum([2, 11, 7, 15], 13)
+print(result) # show [0, 2] because nums[0]+nums[2] is 9
+
 
             
 
