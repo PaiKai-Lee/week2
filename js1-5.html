@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS 要求五</title>
+        <script type="text/javascript">
+            function maxZeros(nums){
+                var count=0;
+                var zeros=[];
+                for (i=0;i<=nums.length-1;i++){
+                    if (nums[i]==0){
+                        count+=1;
+                        if (i==nums.length-1){
+                            zeros.push(count);
+                        }
+                    }else{
+                        zeros.push(count);
+                        count=0;
+                    }
+                }
+                console.log(Math.max(...zeros));
+            }
+            maxZeros([1, 1, 0, 0]) // 得到 2
+            maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0]) // 得到 4
+            maxZeros([1, 1, 1, 1, 1]) // 得到 0
+        </script>
+    </head>
+    <body>  
+    </body>
+</html>
