@@ -41,6 +41,14 @@ def maxProduct(nums):
     for i in range(0,len(nums)-1):#提取每個元素(被乘數),倒數第二個元素已與最後一個元素相乘,故在此不再提取
         for j in range(i+1,len(nums)): #提取被乘數後的元素值(乘數)
             num.append(nums[i]*nums[j])#相乘後放入列表中
+    for i in reversed(range(1,len(num))):
+        for j in range(0,len(num)-1):
+            if num[j]>num[j+1]:
+                x = num[j]
+                num[j]=num[j+1]
+                num[j+1]=x
+                print(num)
+    print(num[-1])
     print(max(num))#提取列表中最大值    
 
 print("\n要求三:")
